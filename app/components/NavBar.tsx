@@ -1,10 +1,11 @@
 import { UserButton, useUser } from '@clerk/nextjs'
-import { ListTree,Icon, PackagePlus, Menu, X, ShoppingBasket } from 'lucide-react'
+import { ListTree,Icon, PackagePlus, Menu, X, ShoppingBasket, Warehouse, HandHeart } from 'lucide-react'
 import Link from 'next/link'
 
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { checkAndAddAssociation } from '../actions'
+import Stock from './Stock'
 
 
 
@@ -16,7 +17,8 @@ const NavBar = () => {
     const navLinks =[
     {href:"/products",label:"Produits",icon:ShoppingBasket},
     {href:"/categorie",label:"Categorie",icon:ListTree},
-    {href:"/new-product",label:"Nouveau Produit",icon:PackagePlus}
+    {href:"/new-product",label:"Nouveau Produit",icon:PackagePlus},
+    {href:"/give",label:"Donner",icon:HandHeart}
 ] 
 
 useEffect(() =>{
@@ -46,6 +48,12 @@ const renderLinks  = (baseClasse : string) => (
         )
 
     })}
+    <button 
+    className="btn btn-sm" 
+    onClick={()=>(document.getElementById('my_modal_stock') as HTMLDialogElement).showModal()}>
+        <Warehouse className='h-4 w-4'/>
+        Alimenter le stock
+        </button>
     </>
 )
   return (
@@ -88,6 +96,8 @@ const renderLinks  = (baseClasse : string) => (
           
           
         </div>
+
+        <Stock />
     </div>
   )
 }
