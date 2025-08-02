@@ -37,12 +37,12 @@ const TransactionComponent = ({tx} : {tx:Transaction}) => {
                         {tx.type == 'IN' ? (
                            <div>
                             <span className='text-success font-bold text-xl capitalize'>
-                                +(tx.quantity) {tx.unit}
+                                +{tx.quantity} {tx.unit}
                             </span>
                            </div>
                         ):(
                         <span className='text-error font-bold text-xl capitalize'>
-                            -(tx.quantity) {tx.unit}
+                            -{tx.quantity} {tx.unit}
                         </span>
 
                         )}

@@ -41,9 +41,10 @@ const page = () => {
                 console.error(error)
             }
         }
-    useEffect(()=>{
-            fetchData
-    },[email])
+        
+useEffect(()=>{
+    fetchData()
+},[email])
 
   useEffect(() => {
         let filtered = transactions;
