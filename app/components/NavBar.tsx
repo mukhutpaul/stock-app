@@ -14,8 +14,9 @@ const NavBar = () => {
     const email = user?.primaryEmailAddress?.emailAddress
 
     const navLinks =[
-    {href:"/categorie",label:"Categorie",icon:ShoppingBasket},
-    {href:"/new-product",label:"Produits",icon:ListTree}
+    {href:"/products",label:"Produits",icon:ShoppingBasket},
+    {href:"/categorie",label:"Categorie",icon:ListTree},
+    {href:"/new-product",label:"Nouveau Produit",icon:PackagePlus}
 ] 
 
 useEffect(() =>{

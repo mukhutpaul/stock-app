@@ -44,7 +44,6 @@ const page = () => {
             toast.error("Veuillez sélectionner une image."); 
             return
         }
-
         try {
             const imageData = new FormData()   
             imageData.append("file",file)  
@@ -123,7 +122,7 @@ const page = () => {
 
                         <input 
                         type="number" 
-                        name="prix"
+                        name="price"
                         placeholder='Prix'
                         className='input input-bordered w-full'
                         value={formData.price}
