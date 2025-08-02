@@ -78,7 +78,7 @@ const page = () => {
         <div className='overflow-x-auto'>
             {products.length ===0 ? (
                <EmptyState 
-               message='Aucunproduit disponible'
+               message='Aucun produit disponible'
                IconComponent='PackageSearch'
                />
             ):(
