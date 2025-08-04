@@ -1,5 +1,5 @@
 import { UserButton, useUser } from '@clerk/nextjs'
-import { ListTree,Icon, PackagePlus, Menu, X, ShoppingBasket, Warehouse, HandHeart, Receipt } from 'lucide-react'
+import { ListTree,Icon, PackagePlus, Menu, X, ShoppingBasket, Warehouse, HandHeart, Receipt, LayoutDashboard } from 'lucide-react'
 import Link from 'next/link'
 
 import { usePathname } from 'next/navigation'
@@ -15,6 +15,7 @@ const NavBar = () => {
     const email = user?.primaryEmailAddress?.emailAddress
 
     const navLinks =[
+    {href:"/",label:"Tableau de bord",icon:LayoutDashboard},
     {href:"/products",label:"Produits",icon:ShoppingBasket},
     {href:"/categorie",label:"Categorie",icon:ListTree},
     {href:"/new-product",label:"Nouveau Produit",icon:PackagePlus},
